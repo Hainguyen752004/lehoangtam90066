@@ -4,21 +4,73 @@
     <meta charset="UTF-8">
     <title>Z COFFEE ĐIỂM HẸN SINH VIÊN </title>
     <style>
-        body {
+      body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background-color:whitesmoke;
         }
+/* Thiết lập quảng cáo */
+.ad-container h3{
+    text-align: center;
+    color: black;
+
+}
+.ad-container {
+    width: 300px; /* Đặt chiều rộng của khung quảng cáo */
+    height: 250px; /* Đặt chiều cao của khung quảng cáo */
+    border: 2px solid #ccc; /* Đặt viền cho khung quảng cáo */
+    padding: 10px; /* Đặt khoảng cách bên trong khung quảng cáo */
+    margin: 20px; /* Đặt khoảng cách xung quanh khung quảng cáo */
+}
+
+.ad-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.ad-container .ad-slide {
+    width: 25%;
+    display: inline-block;
+}
+
+.ad-container .ad-slide img {
+    width: 100%;
+    animation: slide 12s linear infinite;
+    vertical-align: top;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
         header {
-            background-color:burlywood;
-            color:black;
-            text-align: center;
-            padding: 20px;
-        }
+    background-color: burlywood;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    display: flex; /* Sử dụng flexbox để căn giữa nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+}
+
+header img {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px; /* Khoảng cách từ hình ảnh đến văn bản */
+}
+
         h1 {
             margin: 0;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -27,61 +79,139 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .product {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 10px;
-            width: calc(33.33% - 20px);
+        .container h2{
+            text-align: center;
         }
-        .product img {
-            max-width: 100%;
-        }
+/* Thiết lập lưới sản phẩm */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: -10px; /* Đảm bảo lề bằng nhau cho tất cả sản phẩm */
+   
+}
 
-        #menu ul{
-	list-style-type:none;
-	padding: 0;
-	margin: 0;
-}
-#menu ul li{
-	line-height: 2.9em;
-	height: 2.9em;
-}
-#menu {
-    background-color: black; 
-    position: fixed;
-    height: 100%; 
-    width: 150px;
-    left: 0;
-}
-#menu li a{
-	display: block;
-	color: white;
-	padding: 0 1em;
-	border-bottom: 1px;
-}
-#content{
-	padding: 1em 8em;
-}
 .product {
-            /* Thêm hiệu ứng khi hover chuột vào sản phẩm */
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .product:hover {
-            transform: scale(1.05); /* Phóng to sản phẩm khi hover chuột vào */
-        }
-        header {
-    background-color: burlywood;
-    color: black;
-    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
     padding: 20px;
-    position: relative; /* Để thiết lập vị trí tương đối cho hình ảnh */
+    margin: 10px; /* Tạo lề bằng nhau giữa các sản phẩm */
+    width: calc(20% - 20px); /* Chiều rộng 20% cho 5 sản phẩm mỗi dòng */
+    transition: transform 0.5s ease-in-out;
+    box-sizing: border-box; /* Đảm bảo tính toàn vẹn của kích thước */
 }
 
+.product img {
+    max-width: 100%;
+}
 
+.product:hover {
+    transform: scale(1.05);
+}
 
+/* Điều chỉnh kích thước sản phẩm cho các màn hình nhỏ hơn */
+@media (max-width: 1200px) {
+    .product {
+        width: calc(25% - 20px); /* Hiển thị 4 sản phẩm mỗi dòng trên màn hình nhỏ hơn */
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(33.33% - 20px); /* Hiển thị 3 sản phẩm mỗi dòng trên màn hình nhỏ hơn */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 50%; /* Hiển thị 2 sản phẩm mỗi dòng trên màn hình rất nhỏ */
+    }
+}
+
+        /* Menu styles */
+        #menu {
+            background-color: black;
+            position: fixed;
+            height: 100%;
+            width: 150px;
+            left: 0;
+        }
+
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu ul li {
+            line-height: 2.9em;
+            height: 2.9em;
+        }
+
+        #menu li a {
+            display: block;
+            color: white;
+            padding: 0 1em;
+            border-bottom: 1px solid #444; /* Add a border to separate menu items */
+            text-decoration: none; /* Remove underlines from links */
+        }
+
+        #menu li a:hover {
+            background-color: #333; /* Change background color on hover */
+        }
+
+        #content {
+            padding: 1em 8em;
+        }
+        /* Nút để mở menu */
+#menu-button {
+    position: fixed; /* Cố định vị trí nút */
+    top: 20px; /* Khoảng cách từ trên xuống */
+    left: 20px; /* Khoảng cách từ trái sang */
+    z-index: 1; /* Đảm bảo nút hiển thị trên cùng so với menu */
+    cursor: pointer; /* Biểu tượng con trỏ khi di chuyển qua nút */
+}
+
+/* Thanh đánh dấu trên nút menu */
+#menu-button .bar {
+    width: 35px; /* Chiều rộng của thanh đánh dấu */
+    height: 5px; /* Chiều cao của thanh đánh dấu */
+    background-color: white; /* Màu nền của thanh đánh dấu */
+    margin: 6px 0; /* Khoảng cách giữa các thanh đánh dấu */
+    transition: 0.4s; /* Hiệu ứng chuyển đổi */
+}
+
+/* Hiệu ứng khi nút menu được mở */
+#menu-button.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px); /* Xoay và di chuyển thanh đánh dấu đầu */
+}
+
+#menu-button.open .bar:nth-child(2) {
+    opacity: 0; /* Ẩn thanh đánh dấu giữa */
+}
+
+#menu-button.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px); /* Xoay và di chuyển thanh đánh dấu cuối */
+}
+/* thiết lập footter*/
+#footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-bottom: 1px solid #ddd
+
+}
     </style>
+    <script>
+        // hiệu ứng menu
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            var menuButton = document.getElementById("menu-button");
+            menu.classList.toggle("open"); // Toggle the "open" class to show/hide the menu
+            menuButton.classList.toggle("open"); // Toggle the "open" class for the menu button animation
+        }
+    </script>
 </head>
 <body>
     <div id="contain">
@@ -111,30 +241,68 @@
     </div>
     <header>
         <h1>Z COFFEE ĐIỂM HẸN SINH VIÊN </h1>
-        <img  class="hearder"src="https://scontent.fsgn8-3.fna.fbcdn.net/v/t39.30808-6/305918871_100295649519768_642921757111883988_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=liHbbe8en9kAX_fXOXh&_nc_ht=scontent.fsgn8-3.fna&oh=00_AfAlAem4lVSVBff3hKt1JkOHPZY7FX2nOwJ1wS3qcXWpcg&oe=651C3263">
+       <img src="https://scontent.fsgn8-3.fna.fbcdn.net/v/t39.30808-6/305918871_100295649519768_642921757111883988_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=liHbbe8en9kAX_fXOXh&_nc_ht=scontent.fsgn8-3.fna&oh=00_AfAlAem4lVSVBff3hKt1JkOHPZY7FX2nOwJ1wS3qcXWpcg&oe=651C3263">
     </header>
     <div class="container">
         <div class="product">
-            <img src="https://inlysugiare.vn/wp-content/uploads/2020/05/ly-ca-phe-bac-xiu-da.jpg" alt="Sản phẩm 1">
             <h2>Bạc xỉu đá </h2>
-            <p>Bạc xỉu đá là loại đá tự nhiên màu bạc hoặc xám, có kết cấu độc đáo và được sử dụng rộng rãi trong xây dựng và trang trí nội thất do tính thẩm mỹ, độ cứng và độ bền cao.</p>
+            <img src="https://inlysugiare.vn/wp-content/uploads/2020/05/ly-ca-phe-bac-xiu-da.jpg" alt="Sản phẩm 1">   
             <p><strong>Giá:</strong> 35.000 VND</p>
             <a href="#">Mua ngay</a>
         </div>
         <div class="product">
-            <img src="https://cafesongao.com/wp-content/uploads/2021/07/ca-phe-den-da.png" alt="caffee đen đá">
-            <h2>Sản phẩm 2</h2>
-            <p>Cà phê đen đá là thức uống có màu đen hoặc nâu đậm, có hương vị đắng, thơm mạnh từ cà phê rang xay, thường được pha cực đậm và đổ lên đá viên hoặc đá nghiền để làm nguội. Thêm đường hoặc sữa là tùy chọn.</p>
+            <h2>caffee đen đá</h2>
+            <img src="https://cafesongao.com/wp-content/uploads/2021/07/ca-phe-den-da.png" alt="caffee đen đá">           
             <p><strong>Giá:</strong> 15.000 VND</p>
             <a href="#">Mua ngay</a>
         </div>
         <div class="product">
-            <img src="https://product.hstatic.net/1000126467/product/06114756_7f72d98ffb644f7592052640ef5757ca_master.jpg" alt="warrior">
-            <h2>Sản phẩm 3</h2>
-            <p>Thức uống "Warrior" là một loại đồ uống có thể có nhiều biến thể, nhưng thường bao gồm một sự kết hợp của cà phê hoặc năng lượng và các thành phần bổ sung như đường và sữa. Đây là một loại đồ uống phổ biến trong cà phê cửa hàng và quán bar.</p>
+            <h2> Warrior</h2>
+            <img src="https://product.hstatic.net/1000126467/product/06114756_7f72d98ffb644f7592052640ef5757ca_master.jpg" alt="warrior">                    
             <p><strong>Giá:</strong> 25.000 VND</p>
             <a href="#">Mua ngay</a>
         </div>
+        <div class="product">
+            <h2>caffee sữa</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8AIKWzxczherrvVVg6WhYiQ6IRTFgQt8LAkdw6ba5NPbBpWIo3nazYzegikGOv9Cf5Ks&usqp=CAU" alt="caffee sữa">
+            <p><strong>Giá:</strong> 25.000 VND</p>
+            <a href="#">Mua ngay</a>
+        </div>
+        <div class="product">
+            <h2>caffee muối</h2>
+            <img src="data:image/jpeg;base64,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" alt="caffee muối">
+            <p><strong>Giá:</strong> 25.000 VND</p>
+            <a href="#">Mua ngay</a>
+        </div>
+        <div class="ad-container">
+            <h3> BEST SEELER </h3>
+            <div class="ad-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRBbZlZutMXGV9Asn1xshRdwLx6iQ83EBO2fDIzOu90CUsnSafrzi7x-PZw4lyhwYs7Rg&usqp=CAU" alt="BEST SELLER ">
+            </div>
+            <div class="ad-slide">
+                <img src="https://nguyenlieuphache.com/wp-content/uploads/2015/11/sinh-to-dau-yogurt-280x280.jpg" alt="BEST SELLER">
+            </div>
+            <div class="ad-slide">
+                <img src="https://inlysugiare.vn/wp-content/uploads/2020/05/ly-ca-phe-bac-xiu-da.jpg" alt="BEST SELLER">
+            </div>
+            <div class="ad-slide">
+                <img src="https://static-images.vnncdn.net/files/publish/canh-ga-chien-nuoc-mam-don-gian-tuyet-ngon-cho-bua-com-nha-6a1351f115b3474881a915d32ae81cb2.jpg" alt="BEST SELLER">
+            </div>
+        </div>
+        <div id="footer">
+                <div class="column">
+                    <h2>Thông tin liên hệ:</h2>
+                    <!-- Thêm nội dung cho mục này -->
+                </div>
+                <div class="column">
+                    <h2>Thông tin liên hệ khác:</h2>
+                    <!-- Thêm nội dung cho mục này -->
+                </div>
+                <div class="column">
+                    <h2>Thông tin pháp lý:</h2>
+                    <!-- Thêm nội dung cho mục này -->
+                </div>
+			</div><!--#footer-->
     </div>
 </body>
 </html>
