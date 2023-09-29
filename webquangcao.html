@@ -11,8 +11,8 @@
             background-color: #f2f2f2;
         }
         header {
-            background-color: #003366;
-            color: #fff;
+            background-color:burlywood;
+            color:black;
             text-align: center;
             padding: 20px;
         }
@@ -63,6 +63,24 @@
 #content{
 	padding: 1em 8em;
 }
+.product {
+            /* Thêm hiệu ứng khi hover chuột vào sản phẩm */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Phóng to sản phẩm khi hover chuột vào */
+        }
+        header {
+    background-color: burlywood;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Để thiết lập vị trí tương đối cho hình ảnh */
+}
+
+
+
     </style>
 </head>
 <body>
@@ -93,27 +111,28 @@
     </div>
     <header>
         <h1>Z COFFEE ĐIỂM HẸN SINH VIÊN </h1>
+        <img  class="hearder"src="https://scontent.fsgn8-3.fna.fbcdn.net/v/t39.30808-6/305918871_100295649519768_642921757111883988_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=liHbbe8en9kAX_fXOXh&_nc_ht=scontent.fsgn8-3.fna&oh=00_AfAlAem4lVSVBff3hKt1JkOHPZY7FX2nOwJ1wS3qcXWpcg&oe=651C3263">
     </header>
     <div class="container">
         <div class="product">
-            <img src="" alt="Sản phẩm 1">
+            <img src="https://inlysugiare.vn/wp-content/uploads/2020/05/ly-ca-phe-bac-xiu-da.jpg" alt="Sản phẩm 1">
             <h2>Bạc xỉu đá </h2>
-            <p>Mô tả sản phẩm 1...</p>
-            <p><strong>Giá:</strong> 1.000.000 VND</p>
+            <p>Bạc xỉu đá là loại đá tự nhiên màu bạc hoặc xám, có kết cấu độc đáo và được sử dụng rộng rãi trong xây dựng và trang trí nội thất do tính thẩm mỹ, độ cứng và độ bền cao.</p>
+            <p><strong>Giá:</strong> 35.000 VND</p>
             <a href="#">Mua ngay</a>
         </div>
         <div class="product">
-            <img src="link_hinh_san_pham_2.jpg" alt="Sản phẩm 2">
+            <img src="https://cafesongao.com/wp-content/uploads/2021/07/ca-phe-den-da.png" alt="caffee đen đá">
             <h2>Sản phẩm 2</h2>
-            <p>Mô tả sản phẩm 2...</p>
-            <p><strong>Giá:</strong> 2.000.000 VND</p>
+            <p>Cà phê đen đá là thức uống có màu đen hoặc nâu đậm, có hương vị đắng, thơm mạnh từ cà phê rang xay, thường được pha cực đậm và đổ lên đá viên hoặc đá nghiền để làm nguội. Thêm đường hoặc sữa là tùy chọn.</p>
+            <p><strong>Giá:</strong> 15.000 VND</p>
             <a href="#">Mua ngay</a>
         </div>
         <div class="product">
-            <img src="link_hinh_san_pham_3.jpg" alt="Sản phẩm 3">
+            <img src="https://product.hstatic.net/1000126467/product/06114756_7f72d98ffb644f7592052640ef5757ca_master.jpg" alt="warrior">
             <h2>Sản phẩm 3</h2>
-            <p>Mô tả sản phẩm 3...</p>
-            <p><strong>Giá:</strong> 3.000.000 VND</p>
+            <p>Thức uống "Warrior" là một loại đồ uống có thể có nhiều biến thể, nhưng thường bao gồm một sự kết hợp của cà phê hoặc năng lượng và các thành phần bổ sung như đường và sữa. Đây là một loại đồ uống phổ biến trong cà phê cửa hàng và quán bar.</p>
+            <p><strong>Giá:</strong> 25.000 VND</p>
             <a href="#">Mua ngay</a>
         </div>
     </div>
