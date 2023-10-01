@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Z COFFEE ĐIỂM HẸN SINH VIÊN </title>
+    <title>boss caffee</title>
     <style>
       body {
             font-family: Arial, sans-serif;
@@ -16,6 +16,7 @@
     color: black;
 
 }
+
 .ad-container {
     width: 300px; /* Đặt chiều rộng của khung quảng cáo */
     height: 250px; /* Đặt chiều cao của khung quảng cáo */
@@ -34,6 +35,7 @@
 .ad-container .ad-slide {
     width: 25%;
     display: inline-block;
+    margin: 10px; /* Đây là lề giữa các sản phẩm */
 }
 
 .ad-container .ad-slide img {
@@ -130,7 +132,7 @@ header img {
 
         /* Menu styles */
         #menu {
-            background-color: black;
+            background-color:whitesmoke;
             position: fixed;
             height: 100%;
             width: 150px;
@@ -150,9 +152,8 @@ header img {
 
         #menu li a {
             display: block;
-            color: white;
+            color: black;
             padding: 0 1em;
-            border-bottom: 1px solid #444; /* Add a border to separate menu items */
             text-decoration: none; /* Remove underlines from links */
         }
 
@@ -194,23 +195,18 @@ header img {
     transform: rotate(45deg) translate(-5px, -6px); /* Xoay và di chuyển thanh đánh dấu cuối */
 }
 /* thiết lập footter*/
-#footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-bottom: 1px solid #ddd
-
-}
     </style>
     <script>
-        // hiệu ứng menu
+         document.addEventListener('DOMContentLoaded'), function () {
+          // hiệu ứng menu
         function toggleMenu() {
             var menu = document.getElementById("menu");
             var menuButton = document.getElementById("menu-button");
             menu.classList.toggle("open"); // Toggle the "open" class to show/hide the menu
             menuButton.classList.toggle("open"); // Toggle the "open" class for the menu button animation
         }
+        
+    }
     </script>
 </head>
 <body>
@@ -290,19 +286,11 @@ header img {
             </div>
         </div>
         <div id="footer">
-                <div class="column">
-                    <h2>Thông tin liên hệ:</h2>
-                    <!-- Thêm nội dung cho mục này -->
-                </div>
-                <div class="column">
-                    <h2>Thông tin liên hệ khác:</h2>
-                    <!-- Thêm nội dung cho mục này -->
-                </div>
-                <div class="column">
-                    <h2>Thông tin pháp lý:</h2>
-                    <!-- Thêm nội dung cho mục này -->
-                </div>
-			</div><!--#footer-->
+            
+        </div>
+
+        
+        
     </div>
 </body>
 </html>
